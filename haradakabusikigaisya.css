@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+img {
+    background-image: url(shibuya.jpg);
+    background-repeat: no-repeat;
+    
+}
+
+.layout {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+}
+
