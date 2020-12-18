@@ -7,7 +7,17 @@ class AverageCalculator(){
     private $averageScore = 0;
     
     private function input_scores(){
+        $scores = array();
+        while(true){
+            $line = fgets(STDIN);
+            $line = trim($line);
+            if($line == ""){
+                break;
 
+            }
+            $scores[] =$line;
+        }
+            return $scores;
     }
 
  
