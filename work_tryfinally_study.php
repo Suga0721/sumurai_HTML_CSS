@@ -15,7 +15,7 @@ function input_user(&$users_word){
 //***************************** 
 function save_input($users_word){
     $file_num = false;　//「そもそも最初はファイルが開かれていない」と$file_num = false;　で定義している。ファイルが開けなかった場合→$file_numにfalseが代入され、適用。
-    try {　　　　　　　　　　　　　//$file_num = false;をtryの中に入れてしまうとfinallyブロックの中から見えなくなるからtryの外で定義している。
+    try {//$file_num = false;をtryの中に入れてしまうとfinallyブロックの中から見えなくなるからtryの外で定義している。
         　　　　　　　　　　　　　//finallyブロックでの処理に使いたいという理由もある
 
         //ファイル開く                      //try・catchと続けてfinallyと書くことで、tryブロックで例外が発生しても・しなくてもfinllyブロックで囲われた処理が行われます。

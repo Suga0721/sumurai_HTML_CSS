@@ -14,8 +14,7 @@
 function input_scores() {
     $scores = array();　//PHPの場合変数名は$(ダラー)から始まる、array()は配列を作成という意味。
                         //よってarray()を$scoresに代入することで$scoresは配列になる
-
-    while (true) {　// while(true) の場合、{}の中の処理がずっと続く
+    while(true) {  // while(true) の場合、{}の中の処理がずっと続く
 
         // キーボードから(標準入力)１答案分の点数を入力する
         $line = fgets(STDIN);　//　fgets()関数で、標準入力された1行目を取得しています。STADIN→自動的に標準入力の値が入ります。
