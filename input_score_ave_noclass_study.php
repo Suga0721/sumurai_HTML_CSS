@@ -12,12 +12,12 @@
 //*********************************************
 
 function input_scores() {
-    $scores = array();　//PHPの場合変数名は$(ダラー)から始まる、array()は配列を作成という意味。
-                        //よってarray()を$scoresに代入することで$scoresは配列になる
+    $scores = array();　//PHPの場合変数名は$(ダラー)から始まる、array()は配列を作成という意味。→ブラケットでも丸括弧どちらでもOK
+                        //よってarray()を$scoresに代入することで$scoresは配列になる→https://www.sejuku.net/blog/11981
     while(true) {  // while(true) の場合、{}の中の処理がずっと続く
 
         // キーボードから(標準入力)１答案分の点数を入力する
-        $line = fgets(STDIN);　//　fgets()関数で、標準入力された1行目を取得しています。STADIN→自動的に標準入力の値が入ります。
+        $line = fgets(STDIN);　//　fgets()関数で、標準入力(キーボード入力の事)された1行目を取得しています。STADIN→自動的に標準入力の値が入ります。
         // 前後の空白文字を取り除く →fgets()は改行も含めて取得するので、trim()で取り除いています
         $line = trim($line);
         // 入力された点数データが「空」だったら、(点数を入力しないでenterキーを押す)それ以上答案がない、と判断し、繰り返しを終了する
@@ -31,6 +31,7 @@ function input_scores() {
     return $scores;　// 　　return →処理結果を関数の呼び出し元に返す
 }
 
+// fgetsについて→https://tofusystem.work/programming-lesson/about-stdin/
 
 //*********************************************
 // 平均点を求める
